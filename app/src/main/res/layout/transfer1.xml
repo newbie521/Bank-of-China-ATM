@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80sp"
+        android:text="转账账号"
+        android:textColor="@color/black"
+        android:textSize="80dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="200sp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="请输入账号: "
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#333333"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:hint="请输入转账账号"
+            android:inputType="number"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <com.example.atm.MyButton
+        android:id="@+id/确认"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100sp"
+        android:layout_marginRight="20sp"
+        app:mybutton_text="确认" />
+
+    <com.example.atm.MyButton
+        android:id="@+id/清除"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/确认"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        app:mybutton_text="清除" />
+
+    <com.example.atm.MyButton
+        android:id="@+id/返回"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/清除"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="100sp"
+        android:layout_marginRight="20sp"
+        app:mybutton_text="返回" />
+
+</RelativeLayout>

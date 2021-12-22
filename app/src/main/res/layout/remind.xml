@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/textview1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:text="操作失败"
+        android:textColor="@color/black"
+        android:textSize="80dp" />
+
+    <Button
+        android:id="@+id/显示余额"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="显示余额"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/打印凭条"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/显示余额"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="打印凭条"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/返回"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/打印凭条"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="50sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="返回"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/退卡"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/返回"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="退卡"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        tools:ignore="InvalidId" />
+
+
+</RelativeLayout>

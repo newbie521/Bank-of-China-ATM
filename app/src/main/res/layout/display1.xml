@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="交易明细查询"
+        android:layout_marginTop="80dp"
+        android:textSize="80sp"
+        android:gravity="center"
+        android:textColor="#333333"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="200dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="交易日期 "
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="交易金额 "
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#333333"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="交易类型 "
+            android:textSize="30sp"
+            android:gravity="center"
+            android:textColor="#333333"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="200dp">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/返回"
+            android:background="@drawable/btnstyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="300dp"
+            android:text="返回"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/退卡"
+            android:background="@drawable/btnstyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="80dp"
+            android:text="退卡"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+
+</LinearLayout>

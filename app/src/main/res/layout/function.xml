@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60sp"
+        android:text="请选择服务项目"
+        android:textColor="@color/black"
+        android:textSize="80dp" />
+
+    <Button
+        android:id="@+id/取款"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textview"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="00sp"
+        android:background="@drawable/btnstyle"
+        android:text="取款"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/存款"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/取款"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/btnstyle"
+        android:text="存款"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/查询"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/存款"
+        android:layout_marginTop="40sp"
+        android:layout_marginLeft="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="查询"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/转账"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/查询"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="40sp"
+        android:background="@drawable/btnstyle"
+        android:text="转账"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/修改密码"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="修改密码"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <Button
+        android:id="@+id/代理业务"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/修改密码"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="代理业务"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        tools:ignore="InvalidId" />
+
+    <Button
+        android:id="@+id/退卡"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/查询"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/btnstyle"
+        android:text="退卡"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+</RelativeLayout>

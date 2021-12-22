@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mybutton"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/mybutton1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/btnstyle"
+        android:text="text"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="40sp"/>
+</LinearLayout>

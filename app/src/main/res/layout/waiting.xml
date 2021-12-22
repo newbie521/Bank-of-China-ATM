@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-aut？o"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎使用中国银行ATM"
+        android:layout_marginTop="70dp"
+        android:textSize="80sp"
+        android:gravity="center"
+        android:textColor="#333333"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提示：请插入银行卡"
+        android:textSize="50sp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:textColor="#333333"/>
+
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入您的卡号"
+        android:inputType="number"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:background="@drawable/btnstyle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:text="插卡"
+        android:textSize="30sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:orientation="horizontal">
+<!--        <com.example.atm.MyButton-->
+<!--            android:id="@+id/test_mybutton"-->
+<!--            android:layout_width="100sp"-->
+<!--            android:layout_height="100sp"-->
+<!--            app:mybutton_text="test"/>-->
+    <Button
+        android:id="@+id/add_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:textAllCaps="false"
+        android:textColor="#0066FF"
+        android:layout_marginTop="20dp"
+        android:text="初始化数据库"
+        android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:textAllCaps="false"
+            android:textColor="#0066FF"
+            android:textSize="15sp"
+            android:typeface="normal" />
+
+    <Button
+        android:id="@+id/用户须知"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:text="用户须知"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"
+        android:textColor="#0066FF"
+        android:textSize="15sp"
+        android:typeface="normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

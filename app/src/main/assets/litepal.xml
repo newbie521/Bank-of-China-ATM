@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="data_my"></dbname>
+
+    <version value="3"></version>
+
+    <list>
+        <mapping class="com.example.atm.Acc"/>
+        <mapping class="com.example.atm.Information"/>
+    </list>
+
+</litepal>
