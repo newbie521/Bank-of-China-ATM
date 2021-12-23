@@ -1,4 +1,4 @@
-package com.example.atm;
+package com.example.atm.util;
 
 public class Fruit
 {

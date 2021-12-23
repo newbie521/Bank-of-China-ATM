@@ -1,20 +1,27 @@
-package com.example.atm;
+package com.example.atm.ui.detail.getmoney;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.view.WindowManager;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GetMoney extends AppCompatActivity {
+import com.example.atm.MainActivity;
+import com.example.atm.ui.detail.Remind;
+import com.example.atm.ui.detail.function;
+import com.example.atm.util.MyAppCompatActivity;
+import com.example.atm.util.MyButton;
+import com.example.atm.R;
+
+public class GetMoney extends MyAppCompatActivity {
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.get_money1);
+//        设置隐藏状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         EditText editText = (EditText) findViewById(R.id.editText);
         MyButton button_100 = findViewById(R.id.button_100);
@@ -24,6 +31,7 @@ public class GetMoney extends AppCompatActivity {
         MyButton firm = (MyButton) findViewById(R.id.确认);
         MyButton return1 = (MyButton)findViewById(R.id.返回);
         MyButton back_card = (MyButton) findViewById(R.id.退卡);
+
 //       100
         button_100.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +39,6 @@ public class GetMoney extends AppCompatActivity {
                 editText.setText("100");
             }
         });
-
 //       200
         button_200.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +46,6 @@ public class GetMoney extends AppCompatActivity {
                 editText.setText("200");
             }
         });
-
 //       500
         button_500.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,7 +53,6 @@ public class GetMoney extends AppCompatActivity {
                 editText.setText("500");
             }
         });
-
 //       1000
         button_1000.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +60,6 @@ public class GetMoney extends AppCompatActivity {
                 editText.setText("1000");
             }
         });
-
 //       确认
         firm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +74,6 @@ public class GetMoney extends AppCompatActivity {
 
             }
         });
-
 //       返回
         return1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +83,6 @@ public class GetMoney extends AppCompatActivity {
                 finish();
             }
         });
-
  //       退卡
         back_card.setOnClickListener(new View.OnClickListener() {
             @Override

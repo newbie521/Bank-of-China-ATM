@@ -1,4 +1,4 @@
-package com.example.atm;
+package com.example.atm.database;
 
 import org.litepal.crud.DataSupport;
 
@@ -12,9 +12,6 @@ public class Acc extends DataSupport {
     private int balance;
 //    当日可用金额
     private int avi_balance;
-
-
-
 
     public String getAccount() {
         return account;

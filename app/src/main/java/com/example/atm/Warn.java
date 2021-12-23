@@ -1,8 +1,12 @@
 package com.example.atm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -14,9 +18,13 @@ public class Warn extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.warn);
+//        设置隐藏状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        ImageView imageView = findViewById(R.id.imageView);
         TextView textView = (TextView) findViewById(R.id.textView);
-        String news = "<h1 style=\"text-align:center;\">用户须知<h1/>本APP尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本APP会按照本隐私权政策的规定使用和披露您的个人信息。但本APP将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本APP不会将这些信息对外披露或向第三方提供。本APP会不时更新本隐私权政策。 您在同意本APP服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本APP服务使用协议不可分割的一部分。<br />" +
+
+        String news = "本APP尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本APP会按照本隐私权政策的规定使用和披露您的个人信息。但本APP将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本APP不会将这些信息对外披露或向第三方提供。本APP会不时更新本隐私权政策。 您在同意本APP服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本APP服务使用协议不可分割的一部分。<br />" +
                 "<br />" +
                 "<h3>1. 适用范围<h3/>" +
                 "a) 在您使用本APP网络服务，或访问本APP平台网页时，本APP自动接收并记录的您的浏览器和计算机上的信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；<br />" +
@@ -60,5 +68,13 @@ public class Warn extends AppCompatActivity {
 //        textView.setText(news);
         textView.setMovementMethod(ScrollingMovementMethod.getInstance());//段落文本的话要加这个
 
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Warn.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

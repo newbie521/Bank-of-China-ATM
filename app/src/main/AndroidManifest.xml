@@ -16,6 +16,7 @@
             android:name=".MainActivity"
             android:screenOrientation="landscape"
             android:launchMode="singleTask"
+            android:windowFullscreen="false"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +25,7 @@
         </activity>
         <!--登录界面-->
         <activity
-            android:name=".login"
+            android:name=".ui.login.login"
             android:screenOrientation="landscape"
             android:exported="true">
             <intent-filter>
@@ -33,7 +34,7 @@
         </activity>
         <!--功能界面-->
         <activity
-            android:name=".function"
+            android:name=".ui.detail.function"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -43,7 +44,7 @@
         </activity>
         <!--修改密码-->
         <activity
-            android:name=".ChangePassword"
+            android:name=".ui.detail.changeMoney.ChangePassword"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -53,7 +54,7 @@
         </activity>
         <!--提示-->
         <activity
-            android:name=".Remind"
+            android:name=".ui.detail.Remind"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -63,7 +64,7 @@
         </activity>
         <!--取款-->
         <activity
-            android:name=".GetMoney"
+            android:name=".ui.detail.getmoney.GetMoney"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -73,7 +74,7 @@
         </activity>
         <!--存款-->
         <activity
-            android:name=".PutMoney"
+            android:name=".ui.detail.putmoney.PutMoney"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -83,7 +84,7 @@
         </activity>
         <!--查看-->
         <activity
-            android:name=".Seek"
+            android:name=".ui.detail.seek.Seek"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -93,7 +94,7 @@
         </activity>
         <!--余额显示-->
         <activity
-            android:name=".Display"
+            android:name=".ui.detail.seek.Display"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -103,7 +104,7 @@
         </activity>
         <!--交易信息显示-->
         <activity
-            android:name=".Display1"
+            android:name=".ui.detail.seek.Display1"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -113,7 +114,7 @@
         </activity>
         <!--转账-->
         <activity
-            android:name=".Transfer"
+            android:name=".ui.detail.transfer.Transfer"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">
@@ -133,7 +134,17 @@
         </activity>
         <!--打印凭条-->
         <activity
-            android:name=".Print"
+            android:name=".ui.detail.Print"
+            android:screenOrientation="landscape"
+            android:exported="true"
+            tools:ignore="Instantiatable">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <!--六位密码界面-->
+        <activity
+            android:name=".ui.login.password"
             android:screenOrientation="landscape"
             android:exported="true"
             tools:ignore="Instantiatable">

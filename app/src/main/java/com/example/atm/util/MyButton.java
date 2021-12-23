@@ -1,4 +1,4 @@
-package com.example.atm;
+package com.example.atm.util;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.atm.R;
 
 import androidx.annotation.Nullable;
 // 自定义Button按钮

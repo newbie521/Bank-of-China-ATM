@@ -1,25 +1,34 @@
 package com.example.atm;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
+import android.view.Window;
+import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.atm.database.Acc;
+import com.example.atm.database.Information;
+import com.example.atm.ui.login.login;
+import com.example.atm.ui.login.password;
+import com.example.atm.util.MyAppCompatActivity;
 
 import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MyAppCompatActivity {
 
     public static String  acc;
     public static String pas;
@@ -27,9 +36,27 @@ public class MainActivity extends AppCompatActivity {
     public static int avi_bal;//    当日可用金额
     public static final int avi_money = 10000;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+
+//        设置全透明状态栏
+//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            Window window = getWindow();
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
+//                    | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+//                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setStatusBarColor(Color.TRANSPARENT);
+//            window.setNavigationBarColor(Color.TRANSPARENT);
+//        }
+
+//        设置隐藏状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.waiting);
         Button button = (Button) findViewById(R.id.button); // 插卡
@@ -78,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
 //        插入卡
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,7 +150,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Warn.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -136,4 +161,5 @@ public class MainActivity extends AppCompatActivity {
         EditText account = (EditText) findViewById(R.id.account); // 卡号
         account.setText("");
     }
+
 }

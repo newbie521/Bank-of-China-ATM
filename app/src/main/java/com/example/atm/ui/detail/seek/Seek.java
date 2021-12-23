@@ -1,20 +1,25 @@
-package com.example.atm;
+package com.example.atm.ui.detail.seek;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.WindowManager;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.atm.MainActivity;
+import com.example.atm.ui.detail.function;
+import com.example.atm.util.MyButton;
+import com.example.atm.R;
 
 public class Seek extends AppCompatActivity {
 
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.seek);
+//        设置隐藏状态栏
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         MyButton seek1 = findViewById(R.id.余额查询);
         MyButton seek2 = findViewById(R.id.交易明细查询);
@@ -30,7 +35,6 @@ public class Seek extends AppCompatActivity {
                 finish();
             }
         });
-
 //        交易明细查询
         seek2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,7 +44,6 @@ public class Seek extends AppCompatActivity {
                 finish();
             }
         });
-
 //        返回
         return1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +53,6 @@ public class Seek extends AppCompatActivity {
                 finish();
             }
         });
-
 //        退卡
         back_card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +61,6 @@ public class Seek extends AppCompatActivity {
                 startActivity(intent1);
                 finish();
                 Toast.makeText(Seek.this, "欢迎下次使用", Toast.LENGTH_SHORT).show();
-
             }
         });
 

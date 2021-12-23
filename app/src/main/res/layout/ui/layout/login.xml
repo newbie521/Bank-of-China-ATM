@@ -28,16 +28,25 @@
         android:textColor="#333333"/>
 
 
-    <EditText
-        android:id="@+id/password"
+    <com.example.atm.ui.login.password
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="请输入您的密码"
-        android:inputType="numberPassword"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:textSize="30sp" />
+        android:id="@+id/pc_1"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+<!--    <EditText-->
+<!--        android:id="@+id/password"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="请输入您的密码"-->
+<!--        android:inputType="numberPassword"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginStart="50dp"-->
+<!--        android:layout_marginEnd="50dp"-->
+<!--        android:textSize="30sp" />-->
 
     <LinearLayout
         android:layout_width="match_parent"
